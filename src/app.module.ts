@@ -6,6 +6,7 @@ import { FirebaseAuthStrategy } from './firebase/firebase-auth.strategy';
 import { BlogModule } from './blog/blog.module';
 import { RolesGuard } from './profiles/roles.guard';
 import { APP_GUARD } from '@nestjs/core';
+import { AppController } from './app.controller';
 
 
 @Module({
@@ -36,7 +37,7 @@ import { APP_GUARD } from '@nestjs/core';
     BlogModule,
 
   ],
-  controllers: [],
+  controllers: [AppController],
   providers: [
     AppService,
     FirebaseAuthStrategy,
